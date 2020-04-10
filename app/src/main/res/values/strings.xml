@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Brain tongue</string>
     <string name="Start">Начать</string>
+    <string name="punctuation_button_game_levels">Пунктуация</string>
+    <string name="words">слова</string>
+    <string name="accents">ударения</string>
+    <string name="different">разное</string>
+    <string name="different2">разное</string>
+    <string name="Back_punctuation_game_levels">Назад</string>
 </resources>
