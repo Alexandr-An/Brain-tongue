@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +37,16 @@ public class MainActivity extends AppCompatActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //убрать строку состояния конец
+    }
+
+    @Override
+    public void onBackPressed() {
+if(backPressedTime + 2000 > System.currentTimeMillis()){
+    super.onBackPressed();
+    return;
+}else {
+    Toast.makeText(getBaseContext(), "Нажмите ещё раз чтобы выйти.", Toast.LENGTH_SHORT).show();
+}
+        backPressedTime = System.currentTimeMillis();
     }
 }

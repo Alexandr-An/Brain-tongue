@@ -34,7 +34,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button_punctuaitin_back_game_levels"
+                    android:id="@+id/button_punctuation_back_game_levels"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Back_punctuation_game_levels"
