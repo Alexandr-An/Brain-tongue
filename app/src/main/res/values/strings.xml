@@ -8,4 +8,7 @@
     <string name="different2">разное</string>
     <string name="Back_punctuation_game_levels">Назад</string>
     <string name="Level_numb">Уровень:</string>
+    <string name="button_continue_dialog">Продолжить</string>
+    <string name="Level1_accents">Уровень 1</string>
+    <string name="Level2_accents">Уровень 2</string>
 </resources>
