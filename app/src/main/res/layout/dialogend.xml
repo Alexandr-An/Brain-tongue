@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/dialog_fon"
+    android:background="@drawable/previewbackgroundone"
+    android:layout_gravity="center"
+    android:scaleType= "centerCrop"
+    android:layout_margin="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+           android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+<TextView
+    android:id="@+id/button_close_dialog_end"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:text="X"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:background="@drawable/button_gamelevels_all_black95_press_black60"
+    android:layout_gravity="end"/>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+        <TextView
+            android:id="@+id/textdescriptionend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Заменить"
+            android:textColor="@color/black95"
+            android:textSize="24sp"
+            />
+        </ScrollView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_continue_dialog_end"
+
+            android:text="Заменить кнопка"
+            android:background="@drawable/style_button_white_blue_press_universal_level"
+            android:textColor="@color/black95"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+             />
+    </LinearLayout>
+
+</LinearLayout>

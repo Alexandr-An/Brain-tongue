@@ -11,4 +11,10 @@
     <string name="button_continue_dialog">Продолжить</string>
     <string name="Level1_accents">Уровень 1</string>
     <string name="Level2_accents">Уровень 2</string>
+    <string name="level22_accents">Уровень 2</string>
+    <string name="level2_accents_end">Конец 2</string>
+    <string name="level2end">Интересный фактв конце второго уровня</string>
+    <string name="level4_accents">444444</string>
+    <string name="level4end">end4</string>
+    <string name="level444end">end4444444444</string>
 </resources>

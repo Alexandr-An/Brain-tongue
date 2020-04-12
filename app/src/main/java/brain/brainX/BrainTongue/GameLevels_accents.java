@@ -49,6 +49,35 @@ public class GameLevels_accents extends AppCompatActivity {
                 }
             }
         });
+
+        TextView textView_accents2 = (TextView)findViewById(R.id.textView_accents2);
+        textView_accents2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(GameLevels_accents.this, Level2_accents.class);
+                    startActivity(intent);finish();
+                }catch(Exception e){
+
+                }
+            }
+        });
+
+        TextView textView_accents4 = (TextView)findViewById(R.id.textView_accents4);
+        textView_accents4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(GameLevels_accents.this, Level4_accents.class);
+                    startActivity(intent);finish();
+                }catch(Exception e){
+
+                }
+            }
+        });
+
+
+
     }
     @Override
     public void onBackPressed(){

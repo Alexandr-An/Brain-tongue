@@ -1,7 +1,5 @@
 package brain.brainX.BrainTongue;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,10 +15,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.InputStream;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
 
-public class Level1_accents extends AppCompatActivity {
+public class Level2_accents extends AppCompatActivity {
 Dialog dialog;
 Dialog dialogEnd;
 
@@ -59,6 +58,16 @@ public int count = 0;
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);//скрыть заголовок
         dialog.setContentView(R.layout.preview_dialog);//путь к макету диалогового окна
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//прозрачный фон диалогового окна
+        //устанавливаем картинку в диалоовое лкно начло
+        ImageView previewimg = (ImageView)dialog.findViewById(R.id.dialog_img_preview);
+        previewimg.setImageResource(R.drawable.previewimgone);
+        //устанавливаем картинку в диалоовое лкно конец
+
+        //установка описания задания начло
+        TextView textviewdescription = (TextView)dialog.findViewById(R.id.textDescription);
+        textviewdescription.setText(R.string.level2_accents_end);
+        //установка описания задания конец
+
         dialog.setCancelable(false);//окно нельзя закрыть кнопкой назад
         //кнопка которая закрывает диалоговое окно начало
         TextView buttonClose = (TextView)dialog.findViewById(R.id.button_close_dialog);
@@ -66,7 +75,7 @@ public int count = 0;
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level1_accents.this, GameLevels_accents.class);
+                    Intent intent = new Intent(Level2_accents.this, GameLevels_accents.class);
                     startActivity(intent);finish();
                 }catch (Exception e){
 
@@ -97,13 +106,18 @@ public int count = 0;
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false);//окно нельзя закрыть кнопкой назад
+
+        //интеречный факт начало
+        TextView textdescriptionend = (TextView)findViewById(R.id.textdescriptionend);
+        textdescriptionend.setText(R.string.level2end);
+        //интеречный факт  конец
         //кнопка которая закрывает диалоговое окно начало
         TextView buttonClose22 = (TextView)dialogEnd.findViewById(R.id.button_close_dialog_end);
         buttonClose22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level1_accents.this, GameLevels_accents.class);
+                    Intent intent = new Intent(Level2_accents.this, GameLevels_accents.class);
                     startActivity(intent);finish();
                 }catch (Exception e){
 
@@ -118,7 +132,7 @@ public int count = 0;
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level1_accents.this, Level2_accents.class);
+                    Intent intent = new Intent(Level2_accents.this, GameLevels_accents.class);
                     startActivity(intent);finish();
                 }catch (Exception e){
 
@@ -162,7 +176,7 @@ final int[] progress={
         R.id.point10,
 };
         //подключить анимацию начало
-        final Animation a = AnimationUtils.loadAnimation(Level1_accents.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level2_accents.this, R.anim.alpha);
         //подключить анимацию конец
 
         top = random.nextInt(10);
@@ -303,7 +317,7 @@ final int[] progress={
                             if (count == 1){
                                 count =0;
                             }else {
-                                count++;
+                                count--;
                             }
                         }
                         //закрашиваем прогресс серым цветом начало
@@ -356,7 +370,7 @@ final int[] progress={
     @Override
     public void onBackPressed(){
         try {
-            Intent intent = new Intent(Level1_accents.this, GameLevels_accents.class);
+            Intent intent = new Intent(Level2_accents.this, GameLevels_accents.class);
             startActivity(intent);finish();
         }catch (Exception e){
 
